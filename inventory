@@ -1,8 +1,10 @@
 # vim: set ts=2 sw=2 et:
-lb    ansible_host=server0 ansible_user=root
-app0  ansible_host=server1 ansible_user=root
-app1  ansible_host=server2 ansible_user=root
+lb ansible_host=server0 ansible_user=root
+app0 ansible_host=server1 ansible_user=root
+app1 ansible_host=server2 ansible_user=root
 
 [app]
 app0
+
+[db]
 app1

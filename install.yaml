@@ -1,0 +1,26 @@
+---
+# mon playbook
+- hosts: all
+  tasks:
+    - name: Install VIM everywhere
+      apt:
+        name: vim
+        state: present
+    - name: Install TMUX everywhere
+      apt: 
+        name: tmux
+        state: present
+
+- hosts: app
+  tasks:
+  - name: Install Apache
+    apt:
+      name: apache2
+      state: present
+
+- hosts: db
+  tasks:
+  - name: Mariadb
+    apt:
+      name: mariadb-server
+      state: present
